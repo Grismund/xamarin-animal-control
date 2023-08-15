@@ -133,4 +133,7 @@
       <Name>xammy</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\neo.gif" />
+  </ItemGroup>
 </Project>

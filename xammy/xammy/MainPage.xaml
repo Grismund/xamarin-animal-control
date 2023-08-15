@@ -1,21 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="xammy.MainPage">
-
-    <StackLayout>
-        <Label Text="You're stuck in a dungeon. You need to get out. You need to find the key."
-               Padding="20, 20, 20, 20"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand" />
-        <Button Text="Open Inventory"
-                Font="Large"
-                BorderWidth="1"
-                HorizontalOptions="Center"
-                VerticalOptions="EndAndExpand"
-                Padding="20, 20, 20, 20"
-                Clicked="OnButtonClicked"
-        />
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="xammy.MainPage">
+    
+    <StackLayout
+        BackgroundColor="#193335">
+        <Label
+           Padding="40"
+           Text="Kai's Workspace"
+           TextColor="Brown"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"/>
+        <Grid>
+            <Image
+                Source="neo.gif"
+                IsAnimationPlaying="True"
+                Aspect="AspectFill"/>
+            <Grid
+                Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="1"
+                    Padding="20"
+                    Text="Kai's workspace is a mess. As bad as it looks, there are signs that she...or someone was here not too long ago."
+                    HorizontalOptions="Center" 
+                    TextColor="Bisque"/>
+                <Picker 
+                    x:Name="picker"
+                    Grid.Row="2"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Title="Select what you do..."
+                    TitleColor="Gray">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Pet the cat</x:String>
+                            <x:String>Check the computer</x:String>
+                            <x:String>Look at the game system</x:String>
+                            <x:String>Pick up the phone</x:String>
+                            <x:String>Examine the beakers</x:String>
+                            <x:String>Play the video tape</x:String>
+                            <x:String>Eat the sushi</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+        </Grid>
+            <Button Text="Open Inventory"
+                    Font="Large"
+                    BorderWidth="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="20, 20, 20, 20"
+                    Clicked="OnButtonClicked"
+            />
     </StackLayout>
 
 </ContentPage>
