@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xammy="clr-namespace:xammy;assembly=xammy"
              x:Class="xammy.InventoryModal">
     <ContentPage.Content>
         <StackLayout
@@ -9,14 +10,20 @@
             <Label Text="We Fixed This Indeed"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
+            <xammy:StatusControl 
+                LocationName="The Workspace"
+                BackgroundColor="NavajoWhite"/>
+            <xammy:AnimalControl
+                Animal="Cat" />
+            <xammy:AnimalControl
+                Animal="Frog" />
             <Button Text="Close Inventory"
                     Font="Large"
                     BorderWidth="1"
                     HorizontalOptions="Center"
                     VerticalOptions="EndAndExpand"
                     Padding="20, 20, 20, 20"
-                    Clicked="OnButtonClicked"
-            />
+                    Clicked="OnButtonClicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
