@@ -26,22 +26,25 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label
+                    x:Name="mainText"
                     Grid.Row="1"
                     Padding="20"
-                    Text="Kai's workspace is a mess. As bad as it looks, there are signs that she...or someone was here not too long ago."
-                    HorizontalOptions="Center" 
+                    Text="Kai's workspace is a mess. As bad as it looks, there are signs that she (or someone) was here not too long ago."
+                    HorizontalOptions="Center"
                     TextColor="Bisque"/>
                 <Picker 
                     x:Name="picker"
                     Grid.Row="2"
+                    SelectedIndexChanged="OptionSelected"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Title="Select what you do..."
-                    TitleColor="Gray">
+                    TitleColor="#193335"
+                    BackgroundColor="Brown">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Pet the cat</x:String>
-                            <x:String>Check the computer</x:String>
+                            <x:String>Take the camera</x:String>
                             <x:String>Look at the game system</x:String>
                             <x:String>Pick up the phone</x:String>
                             <x:String>Examine the beakers</x:String>
