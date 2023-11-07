@@ -2,18 +2,23 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xammy="clr-namespace:xammy;assembly=xammy"
              x:Class="xammy.InventoryModal">
     <ContentPage.Content>
         <StackLayout
             Padding="20, 20, 20, 20">
-            <Label Text="You have 0 items in your inventory."
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
+            <Frame>
+                <StackLayout>
+                    <Label Text="I'm here"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="You have 555 items in your inventory."/>
+            <xammy:StatusControl 
+                LocationName="The Workspace"
+                BackgroundColor="Chocolate"/>
             <Button Text="Close Inventory"
                     Font="Large"
                     BorderWidth="1"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"
                     Padding="20, 20, 20, 20"
                     Clicked="OnButtonClicked"
             />
