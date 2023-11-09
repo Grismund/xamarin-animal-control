@@ -6,8 +6,7 @@
     x:Class="xammy.StatusControl"
     x:Name="StatusControlRef">
     
-    <Grid
-        BackgroundColor="Chartreuse">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -27,25 +26,25 @@
             Grid.Column="1"
             Text="{Binding LocationName, Source={x:Reference StatusControlRef}}"
             FontSize="Small" />
-        <!-- <Label -->
-        <!--     Grid.Row="1" -->
-        <!--     Grid.Column="0" -->
-        <!--     Text="Morale: " -->
-        <!--     FontSize="Micro" /> -->
-        <!-- <Label -->
-        <!--     x:Name="Morale" -->
-        <!--     Grid.Row="1" -->
-        <!--     Grid.Column="1" -->
-        <!--     FontSize="Micro"/> -->
-        <!-- <Label -->
-        <!--     Grid.Row="2" -->
-        <!--     Grid.Column="0" -->
-        <!--     Text="Discovered: " -->
-        <!--     FontSize="Micro" /> -->
-        <!-- <Label -->
-        <!--     x:Name="Discovered" -->
-        <!--     Grid.Row="1" -->
-        <!--     Grid.Column="1" -->
-        <!--     FontSize="Micro"/> -->
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Morale: "
+            FontSize="Micro" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding Morale, Source={x:Reference StatusControlRef}}"
+            FontSize="Micro"/>
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Discovered: "
+            FontSize="Micro" />
+        <Label
+            x:Name="Discovered"
+            Grid.Row="1"
+            Grid.Column="1"
+            FontSize="Micro"/>
     </Grid>
 </ContentView>
