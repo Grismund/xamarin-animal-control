@@ -16,53 +16,26 @@ namespace xammy
             nameof(Animal),
             typeof(string),
             typeof(AnimalControl),
-            string.Empty
+            string.Empty,
+            propertyChanged: OnAnimalPropertyChanged
         );
-        
-        public static readonly BindableProperty AnimalUriProperty = BindableProperty.Create(
-            nameof(AnimalUri),
-            typeof(string),
-            typeof(AnimalControl),
-            string.Empty
-        );
-        
-        public string Animal
+
+        private static void OnAnimalPropertyChanged(BindableObject bindable, object oldvalue, object newvalue)
         {
-            get
+            if(bindable is AnimalControl animalControl)
             {
-                switch ((string)this.GetValue(AnimalProperty))
-                {
-                    case "Frog":
-                    {
-                        this.SetValue(AnimalUriProperty,
-                            "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0");
-                    }
-                        break;
-                    case "Cat":
-                    {
-                        this.SetValue(AnimalUriProperty,
-                            "https://www.dailypaws.com/thmb/nwNtJnMRSJ33nbdzrdsRwSJHMfU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/anime-cat-names-1204854078-2000-d34f509ae54943d8b78cfb4bf9ba0678.jpg");
-                    }
-                        break;
-                    default:
-                    {
-                        return null;
-                    }
-                        break;
-                }
-                return (string)this.GetValue(AnimalProperty);
-            }
-            set
-            {
-                this.SetValue(AnimalProperty, value);
+                // switch here
+                animalControl.AnimalUri = (string)newvalue;
             }
         }
 
-        public string AnimalUri
+        public string Animal
         {
-            get => (string)this.GetValue(AnimalUriProperty);
-            set => this.SetValue(AnimalUriProperty, value);
+            get => (string)GetValue(AnimalProperty);
+            set => SetValue(AnimalProperty, value);
         }
+
+        public string AnimalUri { get; private set; }
         
         public AnimalControl()
         {
