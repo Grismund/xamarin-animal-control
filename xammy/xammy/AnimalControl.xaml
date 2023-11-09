@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xammy.AnimalControl"
+             x:Name="AnimalControlRef">
+    <ContentView.Content>
+        <StackLayout
+            Padding="10"
+            BackgroundColor="DarkBlue">
+            <Image
+                Source="{Binding AnimalUri, Source={x:Reference AnimalControlRef}}"
+                Aspect="AspectFit"/>
+            <Label
+                Text="{Binding Animal, Source={x:Reference AnimalControlRef}}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Bisque"
+                HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

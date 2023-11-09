@@ -7,21 +7,23 @@
     <ContentPage.Content>
         <StackLayout
             Padding="20, 20, 20, 20">
-            <Frame>
-                <StackLayout>
-                    <Label Text="I'm here"/>
-                </StackLayout>
-            </Frame>
-            <Label Text="You have 555 items in your inventory."/>
+            <Label Text="This Indeed"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
             <xammy:StatusControl 
                 LocationName="The Workspace"
-                BackgroundColor="Chocolate"/>
+                BackgroundColor="NavajoWhite"/>
+            <xammy:AnimalControl
+                Animal="Cat" />
+            <xammy:AnimalControl
+                Animal="Frog" />
             <Button Text="Close Inventory"
                     Font="Large"
                     BorderWidth="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
                     Padding="20, 20, 20, 20"
-                    Clicked="OnButtonClicked"
-            />
+                    Clicked="OnButtonClicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
