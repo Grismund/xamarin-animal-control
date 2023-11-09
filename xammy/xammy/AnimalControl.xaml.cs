@@ -16,19 +16,9 @@ namespace xammy
             nameof(Animal),
             typeof(string),
             typeof(AnimalControl),
-            string.Empty,
-            propertyChanged: OnAnimalPropertyChanged
+            string.Empty
         );
-
-        private static void OnAnimalPropertyChanged(BindableObject bindable, object oldvalue, object newvalue)
-        {
-            if(bindable is AnimalControl animalControl)
-            {
-                // switch here
-                animalControl.AnimalUri = (string)newvalue;
-            }
-        }
-
+        
         public string Animal
         {
             get => (string)GetValue(AnimalProperty);
@@ -40,6 +30,18 @@ namespace xammy
         public AnimalControl()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPropertyChanged(string propertyName = null)
+        {
+            base.OnPropertyChanged(propertyName);
+            if(propertyName == AnimalProperty.PropertyName)
+            {
+                this.AnimalUri = switch(this.Animal)
+                {
+                    
+                }
+            }
         }
     }
 }
