@@ -24,8 +24,8 @@ namespace xammy
         {
             if(bindable is AnimalControl animalControl)
             {
-                // switch here
-                animalControl.AnimalUri = (string)newvalue;
+                animalControl.AnimalUri =
+                    "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0";
             }
         }
 
@@ -34,8 +34,12 @@ namespace xammy
             get => (string)GetValue(AnimalProperty);
             set => SetValue(AnimalProperty, value);
         }
-
-        public string AnimalUri { get; private set; }
+        
+        public string AnimalUri
+        {
+            get; 
+            private set;
+        }
         
         public AnimalControl()
         {
