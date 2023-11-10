@@ -37,10 +37,7 @@ namespace xammy
             base.OnPropertyChanged(propertyName);
             if(propertyName == AnimalProperty.PropertyName)
             {
-                this.AnimalUri = switch(this.Animal)
-                {
-                    
-                }
+                this.AnimalUri = 
             }
         }
     }
