@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xammy.iOS", "xammy\xammy.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xammy", "xammy\xammy\xammy.csproj", "{F16C1B72-3279-441B-809D-02CFBE7238D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{F16C1B72-3279-441B-809D-02CFBE7238D0}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{F16C1B72-3279-441B-809D-02CFBE7238D0}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{F16C1B72-3279-441B-809D-02CFBE7238D0}.Release|iPhone.Build.0 = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4FD4DDC8-F638-451D-B345-E00E5F4EDF49}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
