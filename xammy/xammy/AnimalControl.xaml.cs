@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,8 +18,15 @@ namespace xammy
         {
             if(bindable is AnimalControl animalControl)
             {
-                animalControl.AnimalUri =
-                    "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0";
+                if (animalControl.Animal == "Frog")
+                {
+                    animalControl.AnimalUri =
+                        "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0";
+
+                } else if (animalControl.Animal == "Cat")
+                {
+                    animalControl.AnimalUri = "https://www.dailypaws.com/thmb/nwNtJnMRSJ33nbdzrdsRwSJHMfU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/anime-cat-names-1204854078-2000-d34f509ae54943d8b78cfb4bf9ba0678.jpg";
+                }
             }
         }
 
@@ -34,13 +35,14 @@ namespace xammy
             get => (string)GetValue(AnimalProperty);
             set => SetValue(AnimalProperty, value);
         }
-        
+
+        string animalUri = "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0";
         public string AnimalUri
         {
-            get; 
-            private set;
+            get => animalUri;
+            private set { animalUri = value; OnPropertyChanged(); }
         }
-        
+
         public AnimalControl()
         {
             InitializeComponent();
