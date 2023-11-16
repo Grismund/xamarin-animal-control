@@ -36,7 +36,7 @@ namespace xammy
             set => SetValue(AnimalProperty, value);
         }
 
-        string animalUri = "https://i.etsystatic.com/isla/910f97/34229353/isla_fullxfull.34229353_lywq3bgq.jpg?version=0";
+        private string animalUri = "";
         public string AnimalUri
         {
             get => animalUri;
